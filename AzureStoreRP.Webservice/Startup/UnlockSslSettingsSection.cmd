@@ -1,0 +1,1 @@
+%systemroot%\system32\inetsrv\appcmd.exe unlock config /section:system.webServer/security/access

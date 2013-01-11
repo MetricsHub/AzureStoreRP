@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="AzureStoreRP.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2012-10.1.8">
+  <Role name="AzureStoreRP.Webservice">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="AzureStoreRP.Configuration.AzureStoreRequestAuthorization" value="false" />
+      <Setting name="AzureStoreRP.Configuration.AzureStoreSingleSignOnSecret" value="topsecret" />
+      <Setting name="AzureStoreRP.Configuration.AccountDataProviderConnectionString" value="" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="AzureStoreRP.Website">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="AzureStoreRP.Configuration.AzureStoreSingleSignOnSecret" value="topsecret" />
+      <Setting name="AzureStoreRP.Configuration.AccountDataProviderConnectionString" value="" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

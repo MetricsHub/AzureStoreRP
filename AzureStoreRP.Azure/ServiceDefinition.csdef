@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="AzureStoreRP.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2012-10.1.8">
+  <WebRole name="AzureStoreRP.Webservice" vmsize="ExtraSmall">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="HttpIn" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="HttpIn" protocol="http" port="8080" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="AzureStoreRP.Configuration.AzureStoreRequestAuthorization" />
+      <Setting name="AzureStoreRP.Configuration.AzureStoreSingleSignOnSecret" />
+      <Setting name="AzureStoreRP.Configuration.AccountDataProviderConnectionString" />
+    </ConfigurationSettings>
+    <Startup priority="-2">
+      <Task commandLine="Startup\UnlockSslSettingsSection.cmd" executionContext="elevated" taskType="simple" />
+    </Startup>
+  </WebRole>
+  <WebRole name="AzureStoreRP.Website" vmsize="ExtraSmall">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="HttpIn" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="HttpIn" protocol="http" port="80" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="AzureStoreRP.Configuration.AzureStoreSingleSignOnSecret" />
+      <Setting name="AzureStoreRP.Configuration.AccountDataProviderConnectionString" />
+    </ConfigurationSettings>
+  </WebRole>
+</ServiceDefinition>
