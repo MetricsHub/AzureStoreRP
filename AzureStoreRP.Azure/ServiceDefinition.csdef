@@ -21,6 +21,7 @@
     </ConfigurationSettings>
     <Startup priority="-2">
       <Task commandLine="Startup\UnlockSslSettingsSection.cmd" executionContext="elevated" taskType="simple" />
+      <Task commandLine="Startup\InstallCertificates.cmd" executionContext="elevated" taskType="simple" />
     </Startup>
   </WebRole>
   <WebRole name="AzureStoreRP.Website" vmsize="ExtraSmall">
