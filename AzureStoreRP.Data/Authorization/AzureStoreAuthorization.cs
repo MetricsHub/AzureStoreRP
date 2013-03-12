@@ -62,8 +62,14 @@ namespace AzureStoreRP.Data.Authorization
             if (ConfigurationDataProvider.AzureStoreRequestAuthorization)
             {
                 if (clientCertificate == null || (
+                    // GTERdfeExtensibilityClientProd.cer, will ‎expire on Friday, ‎May ‎17, 2013
                     !clientCertificate.Thumbprint.Equals("C318C397979CB8BE103AA11346E4D82878C8A2B1", StringComparison.OrdinalIgnoreCase) &&
-                    !clientCertificate.Thumbprint.Equals("A9BE06E8881339D7B69F8421F51304431BED0EE7", StringComparison.OrdinalIgnoreCase)
+
+                    // BaltimoreRdfeExtensibilityClientProd.cer, will ‎expire on ‎Saturday, ‎February ‎14, ‎2015
+                    !clientCertificate.Thumbprint.Equals("‎F2693F8487AB975A28C19610A672E59DDCF873F2", StringComparison.OrdinalIgnoreCase) &&
+
+                    // BaltimoreRdfeExtensibilityClientStage.cer, will ‎expire on ‎Saturday, ‎February ‎14, ‎2015
+                    !clientCertificate.Thumbprint.Equals("‎19D02B07DEC22C0998BB266A7DA5BA8B4D42A0A6", StringComparison.OrdinalIgnoreCase)
                 ))
                 {
                     Logger.ErrorFormat(

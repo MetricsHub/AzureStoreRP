@@ -134,6 +134,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Startup\Certificates\BaltimoreCyberTrustRoot.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Startup\Certificates\BaltimoreMicrosoftInternetAuthority.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Startup\Certificates\BaltimoreMSITMachineAuthCA2.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Startup\Certificates\BaltimoreRdfeExtensibilityClientProd.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Startup\Certificates\BaltimoreRdfeExtensibilityClientStage.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Startup\Certificates\GTECyberTrustGlobalRoot.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Startup\Certificates\GTEMicrosoftInternetAuthority.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Startup\Certificates\GTEMicrosoftSecureServerAuthority.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Startup\Certificates\GTERdfeExtensibilityClientProd.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -148,18 +175,6 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Startup\UnlockSslSettingsSection.cmd">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Startup\Certificates\AzureStoreClientCertificate.cer">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Startup\Certificates\GTECyberTrustGlobalRoot.cer">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Startup\Certificates\MicrosoftInternetAuthority.cer">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Startup\Certificates\MicrosoftSecureServerAuthority.cer">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Startup\InstallCertificates.cmd">
