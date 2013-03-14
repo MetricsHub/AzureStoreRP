@@ -65,6 +65,9 @@ namespace AzureStoreRP.Data.Authorization
                     // GTERdfeExtensibilityClientProd.cer, will ‎expire on Friday, ‎May ‎17, 2013
                     !clientCertificate.Thumbprint.Equals("C318C397979CB8BE103AA11346E4D82878C8A2B1", StringComparison.OrdinalIgnoreCase) &&
 
+                    // GTERdfeExtensibilityClientStage.cer, will ‎expire on Friday, ‎May ‎17, 2013
+                    !clientCertificate.Thumbprint.Equals("‎BE7DF8FBA33BFE8D31E07BCF161E9F458D38CF95", StringComparison.OrdinalIgnoreCase) &&
+
                     // BaltimoreRdfeExtensibilityClientProd.cer, will ‎expire on ‎Saturday, ‎February ‎14, ‎2015
                     !clientCertificate.Thumbprint.Equals("‎F2693F8487AB975A28C19610A672E59DDCF873F2", StringComparison.OrdinalIgnoreCase) &&
 

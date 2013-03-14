@@ -1,6 +1,7 @@
 certutil -f -addstore root Startup\Certificates\GTECyberTrustGlobalRoot.cer
 certutil -f -addstore CA   Startup\Certificates\GTEMicrosoftInternetAuthority.cer
 certutil -f -addstore CA   Startup\Certificates\GTEMicrosoftSecureServerAuthority.cer
+certutil -f -addstore My   Startup\Certificates\GTERdfeExtensibilityClientStage.cer
 certutil -f -addstore My   Startup\Certificates\GTERdfeExtensibilityClientProd.cer
 
 certutil -f -addstore root Startup\Certificates\BaltimoreCyberTrustRoot.cer

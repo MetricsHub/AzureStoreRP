@@ -180,6 +180,9 @@
     <Content Include="Startup\InstallCertificates.cmd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Startup\Certificates\GTERdfeExtensibilityClientStage.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
