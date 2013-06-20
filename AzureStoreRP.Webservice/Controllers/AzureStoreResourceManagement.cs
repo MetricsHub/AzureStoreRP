@@ -221,7 +221,7 @@ namespace AzureStoreRP.Webservice.Controllers
                     if (resource == null)
                     {
                         Logger.ErrorFormat("DeleteResource: Unable to find Azure Store resource {1} for subscription {0}.", subscriptionId, resourceName);
-                        throw new HttpResponseException(HttpStatusCode.NotFound);
+                        throw new HttpResponseException(HttpStatusCode.OK);
                     }
 
                     provider.DeleteAzureStoreResource(resource);
